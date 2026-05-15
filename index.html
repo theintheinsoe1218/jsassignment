@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Functions Assignment</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+        min-height: 100vh;
+        padding: 40px 20px;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      .header {
+        text-align: center;
+        color: white;
+        margin-bottom: 40px;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        opacity: 0.9;
+        font-size: 1.1rem;
+      }
+
+      .assignment-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+
+      .assignment-card {
+        background: white;
+        border-radius: 18px;
+        padding: 22px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        transition: 0.3s;
+        border-top: 6px solid #3498db;
+      }
+
+      .assignment-card:hover {
+        transform: translateY(-6px);
+      }
+
+      .assignment-number {
+        width: 45px;
+        height: 45px;
+        background: #3498db;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .assignment-card h3 {
+        color: #2c3e50;
+        margin-bottom: 12px;
+      }
+
+      .assignment-card p {
+        color: #555;
+        line-height: 1.7;
+      }
+
+      code {
+        background: #2d3436;
+        color: #ffeaa7;
+        padding: 3px 8px;
+        border-radius: 6px;
+        font-size: 0.95rem;
+      }
+
+      .footer {
+        margin-top: 40px;
+        text-align: center;
+        color: white;
+      }
+
+      .footer span {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 10px 18px;
+        border-radius: 10px;
+        display: inline-block;
+      }
+
+      @media (max-width: 600px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1>JavaScript Functions Assignments</h1>
+        <p>Practice JavaScript Functions Step by Step 🚀</p>
+      </div>
+
+      <!-- Assignments -->
+      <div class="assignment-grid">
+        <div class="assignment-card">
+          <div class="assignment-number">1</div>
+          <h3>Greeting Function</h3>
+          <p>
+            <code>greet(name)</code> function ကို ရေးပြီး greeting message ကို
+            return ပြန်ပါ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">2</div>
+          <h3>Add Numbers</h3>
+          <p>
+            <code>add(a,b)</code> function ကို ရေးပြီး ဂဏန်းနှစ်ခု ပေါင်းလဒ်ကို
+            return ပြန်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">3</div>
+          <h3>Multiply Numbers</h3>
+          <p>
+            <code>multiply(a,b)</code> function ကို ရေးပြီး ဂဏန်းနှစ်ခု
+            မြှောက်လဒ်ကို return ပြန်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">4</div>
+          <h3>Check Even/Odd</h3>
+          <p>
+            <code>checkEven(num)</code> function ကို ရေးပြီး ဂဏန်းက Even number
+            ဖြစ်/မဖြစ် စစ်ပြီး return ပြန်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <!-- <div class="assignment-card">
+          <div class="assignment-number">5</div>
+          <h3>Square Number</h3>
+          <p>
+            <code>square(num)</code> ဆိုတဲ့ function တစ်ခုရေးပြီး ပေးထားတဲ့
+            ဂဏန်းကို (square) လုပ်ပြီး return ပြန်ပေးပါ။ console မှာ result
+            ပြပါ။
+          </p>
+        </div> -->
+
+        <div class="assignment-card">
+          <div class="assignment-number">5</div>
+          <h3>Maximum Number</h3>
+          <p>
+            <code>findMax(a,b)</code> function ကို ရေးပြီး ဂဏန်းနှစ်ခုထဲမှ
+            အကြီးဆုံး number return ပြန်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">6</div>
+          <h3>Minimum Number</h3>
+          <p>
+            <code>findMin(a,b)</code> function ကို ရေးပြီး ဂဏန်းနှစ်ခုထဲမှ
+            အငယ်ဆုံး number ကို return ပြန်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">7</div>
+          <h3>Area of Rectangle</h3>
+          <p>
+            <code>rectangleArea(w,h)</code> function ကို ရေးပြီး Rectangle area
+            တွက်ပြီး return ပြန်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">8</div>
+          <h3>Age Checker</h3>
+          <p>
+            <code>checkAge(age)</code> function ကို ရေးပြီး Requirements age <
+            13 → "Child" age >= 13 && age < 20 → "Teenager" age >= 20 && age <
+            60 → "Adult" age >= 60 → "Senior" အသက်အလိုက် category ကို return
+            ပြန်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">9</div>
+          <h3>Temperature Converter</h3>
+          <p>
+            <code>toCelsius(f)</code> ဆိုတဲ့ function တစ်ခုရေးပြီး Fahrenheit
+            ကနေ Celsius ကို ပြောင်းပေးပါ။ console မှာ result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">10</div>
+          <h3>String Length</h3>
+          <p>
+            <code>stringLength(text)</code> function ကို ရေးပြီး string ရဲ့
+            length ကို return ပြန်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">11</div>
+          <h3>Uppercase Text</h3>
+          <p>
+            <code>toUpper(text)</code> function ကို ရေးပြီး string ကို Uppercase
+            ပြန်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">12</div>
+          <h3>Lowercase Text</h3>
+          <p>
+            <code>toLower(text)</code> function ကို ရေးပြီး string ကို Lowercase
+            ပြန်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">13</div>
+          <h3>Random Number</h3>
+          <p>
+            <code>randomNumber()</code> function ကို ရေးပြီး Random number ကို
+            return ပြန်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">14</div>
+          <h3>Factorial</h3>
+          <p>
+            <code>factorial(num)</code> function ကို ရေးပြီး num ရဲ့ factorial
+            ကို return ပြန်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">15</div>
+          <h3>Reverse String</h3>
+          <p>
+            <code>reverseString(text)</code> function ကို ရေးပြီး string ကို
+            reverse ပြန်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">16</div>
+          <h3>Positive Number</h3>
+          <p>
+            <code>isPositive(num)</code> function ကို ရေးပြီး num ဟာ positive
+            number မရှိသည့်အချက်ကို return ပြန်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">17</div>
+          <h3>Circle Area</h3>
+          <p>
+            <code>circleArea(r)</code> ဆိုတဲ့ function တစ်ခုရေးပြီး (circle) ရဲ့
+            ဧရိယာကို တွက်ပြီး return ပြန်ပေးပါ။ console မှာ result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">18</div>
+          <h3>Power Function</h3>
+          <p>
+            <code>power(a,b)</code> ဆိုတဲ့ function တစ်ခုရေးပြီး a ကို b (power)
+            တင်ထားတဲ့ တန်ဖိုးကို return ပြန်ပေးပါ။ console မှာ result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">19</div>
+          <h3>Discount Calculator</h3>
+          <p>
+            <code>discount(price,percent)</code> discount(price, percent) ဆိုတဲ့
+            function တစ်ခုရေးပြီး ဈေးနှုန်း (price) ထဲက discount လျော့ပြီးနောက်
+            နောက်ဆုံးကျသင့်ငွေကို return ပြန်ပေးပါ။ console မှာ result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">20</div>
+          <h3>Grade Checker</h3>
+          <p>
+            <code>checkGrade(mark)</code> ဆိုတဲ့ function တစ်ခုရေးပါ။ ပေးထားတဲ့
+            mark (0 မှ 100 အတွင်း score) အပေါ်မူတည်ပြီး အောက်ပါအတိုင်း Grade ကို
+            သတ်မှတ်ပြီး return ပြန်ပေးရမည်။ Grade သတ်မှတ်ချက်များ 80 မှ 100
+            အတွင်း → "A" 70 မှ 79 အတွင်း → "B" 60 မှ 69 အတွင်း → "C" 50 မှ 59
+            အတွင်း → "D" 0 မှ 49 အတွင်း → "F"
+          </p>
+        </div>
+
+        <!-- <div class="assignment-card">
+          <div class="assignment-number">26</div>
+          <h3>Count Vowels</h3>
+          <p>Create <code>countVowels(text)</code> function.</p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">27</div>
+          <h3>Login Checker</h3>
+          <p>Create <code>login(user,pass)</code> function.</p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">28</div>
+          <h3>Array Max</h3>
+          <p>Create <code>arrayMax(arr)</code> function.</p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">29</div>
+          <h3>Array Min</h3>
+          <p>Create <code>arrayMin(arr)</code> function.</p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">30</div>
+          <h3>BMI Calculator</h3>
+          <p>Create <code>bmi(weight,height)</code> function.</p>
+        </div> -->
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <span> Open Console → Right Click → Inspect → Console </span>
+      </div>
+    </div>
+
+    <script src="function.js"></script>
+  </body>
+</html>
