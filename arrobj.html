@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array & Object Assignments</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        min-height: 100vh;
+      }
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 15px 20px;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        padding: 10px 18px;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+
+      .navbar a:hover {
+        background: #00b894;
+      }
+
+      .navbar a.active {
+        background: #00b894;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: auto;
+        padding: 120px 20px 40px;
+      }
+
+      .header {
+        text-align: center;
+        color: white;
+        margin-bottom: 40px;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        opacity: 0.9;
+        font-size: 1.1rem;
+      }
+
+      .assignment-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+
+      .assignment-card {
+        background: white;
+        border-radius: 18px;
+        padding: 22px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        transition: 0.3s;
+        border-top: 6px solid #00b894;
+      }
+
+      .assignment-card:hover {
+        transform: translateY(-6px);
+      }
+
+      .assignment-number {
+        width: 45px;
+        height: 45px;
+        background: #00b894;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .assignment-card h3 {
+        color: #2c3e50;
+        margin-bottom: 12px;
+      }
+
+      .assignment-card p {
+        color: #555;
+        line-height: 1.7;
+      }
+
+      code {
+        background: #2d3436;
+        color: #ffeaa7;
+        padding: 3px 8px;
+        border-radius: 6px;
+        font-size: 0.95rem;
+      }
+
+      .footer {
+        margin-top: 40px;
+        text-align: center;
+        color: white;
+      }
+
+      .footer span {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 10px 18px;
+        border-radius: 10px;
+        display: inline-block;
+      }
+
+      @media (max-width: 600px) {
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .navbar {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .container {
+          padding-top: 160px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a href="index.html">Function Assignment</a>
+      <a href="array-object.html" class="active">Array & Object</a>
+    </div>
+
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1>JavaScript Array & Object Assignments</h1>
+        <p>Practice Array & Object Step by Step 🚀</p>
+      </div>
+
+      <!-- Assignments -->
+      <div class="assignment-grid">
+        <!-- 1 -->
+        <div class="assignment-card">
+          <div class="assignment-number">1</div>
+          <h3>Create Array</h3>
+          <p>
+            <code>fruits</code> ဆိုတဲ့ array တစ်ခုဖန်တီးပြီး fruits 3
+            မျိုးထည့်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <!-- 2 -->
+        <div class="assignment-card">
+          <div class="assignment-number">2</div>
+          <h3>Access Array Item</h3>
+          <p>Array ထဲက first item ကို console တွင် ထုတ်ပြပါ။</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="assignment-card">
+          <div class="assignment-number">3</div>
+          <h3>Add Array Item</h3>
+          <p>
+            <code>push()</code> method ကိုသုံးပြီး array ထဲသို့ item အသစ်ထည့်ပါ။
+            console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <!-- 4 -->
+        <div class="assignment-card">
+          <div class="assignment-number">4</div>
+          <h3>Remove Array Item</h3>
+          <p>
+            <code>pop()</code> method ကိုသုံးပြီး array ထဲမှ last item ကို
+            ဖျက်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <!-- 5 -->
+        <div class="assignment-card">
+          <div class="assignment-number">5</div>
+          <h3>Array Length</h3>
+          <p>Array ရဲ့ length ကို console တွင် ထုတ်ပြပါ။</p>
+        </div>
+
+        <!-- 6 -->
+        <div class="assignment-card">
+          <div class="assignment-number">6</div>
+          <h3>Loop Array</h3>
+          <p>
+            <code>for loop</code> ကိုသုံးပြီး array items အားလုံးကို ထုတ်ပြပါ။
+          </p>
+        </div>
+
+        <!-- 7 -->
+        <div class="assignment-card">
+          <div class="assignment-number">7</div>
+          <h3>Find Maximum Number</h3>
+          <p>
+            Number array ထဲမှ အကြီးဆုံး number ကို ရှာပြီး console တွင်ပြပါ။
+          </p>
+        </div>
+
+        <!-- 8 -->
+        <div class="assignment-card">
+          <div class="assignment-number">8</div>
+          <h3>Find Minimum Number</h3>
+          <p>Number array ထဲမှ အငယ်ဆုံး number ကို ရှာပြီး console တွင်ပြပါ။</p>
+        </div>
+
+        <!-- 9 -->
+        <div class="assignment-card">
+          <div class="assignment-number">9</div>
+          <h3>Sum Array</h3>
+          <p>
+            Array ထဲရှိ number များအားလုံးကို ပေါင်းပြီး total ကို console တွင်
+            ထုတ်ပြပါ။
+          </p>
+        </div>
+
+        <!-- 10 -->
+        <div class="assignment-card">
+          <div class="assignment-number">10</div>
+          <h3>Reverse Array</h3>
+          <p>Array ကို reverse ပြောင်းပြီး console တွင် result ပြပါ။</p>
+        </div>
+
+        <!-- 11 -->
+        <div class="assignment-card">
+          <div class="assignment-number">11</div>
+          <h3>Create Object</h3>
+          <p>
+            <code>getName(person)</code> ဆိုတဲ့ function တစ်ခုရေးပြီး person
+            object ထဲက name value ကို return ပြန်ပေးပါ။ console မှာ result ပြပါ။
+          </p>
+        </div>
+        <div class="assignment-card">
+          <div class="assignment-number">12</div>
+
+          <h3>Cart Total Calculation</h3>
+
+          <p>
+            <code>cartTotal(cart)</code> function ကိုရေးပြီး cart array ထဲရှိ
+            product များ၏ price အားလုံးကို ပေါင်းပြီး total price ကို return
+            ပြန်ပါ။ Console တွင် result ကို ပြသပါ။const cart = [ { name: "Book",
+            price: 1000 }, { name: "Pen", price: 500 }, { name: "Bag", price:
+            2000 } ];
+          </p>
+        </div>
+        <div class="assignment-card">
+          <div class="assignment-number">13</div>
+          <h3>Update Object Property</h3>
+          <p>
+            <code>updateAge(person, newAge)</code> function ကိုရေးပြီး person
+            object ထဲက age ကို update လုပ်ပါ။ console တွင် result ပြပါ။ let
+            person = { name: "Mg Mg", age: 20 };
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">14</div>
+          <h3>Array Average</h3>
+          <p>
+            <code>average(arr)</code> function ကိုရေးပြီး array ထဲက numbers
+            များ၏ average ကိုတွက်ပြီး return ပြန်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">15</div>
+          <h3>Multiply Array Values</h3>
+          <p>
+            <code>multiplyArray(arr, num)</code> function ကိုရေးပြီး array ထဲက
+            number အားလုံးကို num နဲ့မြှောက်ပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">16</div>
+          <h3>Count Vowels</h3>
+          <p>
+            <code>countVowels(text)</code> function ကိုရေးပြီး string ထဲက vowels
+            (a,e,i,o,u) အရေအတွက်ကိုတွက်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">17</div>
+          <h3>Login Validation</h3>
+          <p>
+            <code>login(username, password)</code> function ကိုရေးပြီး username
+            = "admin" နှင့် password = "1234" ဖြစ်မှ true return ပြန်ပါ။
+            အခြားအားလုံး false return ပြန်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+          <div class="assignment-number">18</div>
+          <h3>Square Array Values</h3>
+          <p>
+            <code>squareArray(arr)</code> function ကိုရေးပြီး array ထဲက number
+            အားလုံးကို square လုပ်ပါ။ console တွင် result ပြပါ။
+          </p>
+        </div>
+
+        <!-- 16 -->
+        <div class="assignment-card">
+          <div class="assignment-number">19</div>
+          <h3>Loop Object</h3>
+          <p>
+            <code>for...in</code> loop ကိုသုံးပြီး object properties အားလုံးကို
+            ထုတ်ပြပါ။
+          </p>
+        </div>
+
+        <!-- 17 -->
+        <div class="assignment-card">
+          <div class="assignment-number">20</div>
+          <h3>Array of Objects</h3>
+          <p>Students array object တစ်ခုဖန်တီးပြီး student 3 ယောက်ထည့်ပါ။</p>
+        </div>
+
+        <!-- 18 -->
+        <div class="assignment-card">
+          <div class="assignment-number">18</div>
+          <h3>Find Student</h3>
+          <p>
+            Array of Objects ထဲမှ student name ကို ရှာပြီး console တွင်ပြပါ။
+          </p>
+        </div>
+
+        <div class="assignment-card">
+            <div class="assignment-number">19</div>
+            <h3>Find Max Age</h3>
+            <p>
+                <code>findMaxAge(users)</code> function ကိုရေးပြီး object array ထဲက max age ရှာပါ။
+                const users = [
+                { name: "Aung Aung", age: 25 },
+                { name: "Mg Mg", age: 30 },
+                { name: "Su Su", age: 22 }
+                ];
+
+            </p>
+        </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <span> Open Console → Right Click → Inspect → Console </span>
+      </div>
+    </div>
+
+    <script src="array-object.js"></script>
+  </body>
+</html>

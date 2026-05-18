@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript Functions Assignment</title>
+    <title>JavaScript Assignments</title>
 
     <style>
       * {
@@ -16,12 +16,47 @@
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background: linear-gradient(135deg, #1e3c72, #2a5298);
         min-height: 100vh;
-        padding: 40px 20px;
       }
 
+      /* ================= NAVBAR ================= */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 15px 20px;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        padding: 10px 18px;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+
+      .navbar a:hover {
+        background: #3498db;
+      }
+
+      .navbar a.active {
+        background: #3498db;
+      }
+
+      /* ================= CONTAINER ================= */
       .container {
         max-width: 1100px;
         margin: auto;
+        padding: 120px 20px 40px;
       }
 
       .header {
@@ -40,12 +75,14 @@
         font-size: 1.1rem;
       }
 
+      /* ================= GRID ================= */
       .assignment-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 20px;
       }
 
+      /* ================= CARD ================= */
       .assignment-card {
         background: white;
         border-radius: 18px;
@@ -90,6 +127,7 @@
         font-size: 0.95rem;
       }
 
+      /* ================= FOOTER ================= */
       .footer {
         margin-top: 40px;
         text-align: center;
@@ -103,24 +141,38 @@
         display: inline-block;
       }
 
+      /* ================= MOBILE ================= */
       @media (max-width: 600px) {
         .header h1 {
           font-size: 2rem;
+        }
+
+        .navbar {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .container {
+          padding-top: 160px;
         }
       }
     </style>
   </head>
 
   <body>
+    <div class="navbar">
+      <a href="#" class="active">Function Assignment</a>
+      <a href="arrobj.html">Array & Object</a>
+    </div>
+
     <div class="container">
-      <!-- Header -->
       <div class="header">
         <h1>JavaScript Functions Assignments</h1>
         <p>Practice JavaScript Functions Step by Step 🚀</p>
       </div>
 
-      <!-- Assignments -->
       <div class="assignment-grid">
+        <!-- 1 -->
         <div class="assignment-card">
           <div class="assignment-number">1</div>
           <h3>Greeting Function</h3>
@@ -130,6 +182,7 @@
           </p>
         </div>
 
+        <!-- 2 -->
         <div class="assignment-card">
           <div class="assignment-number">2</div>
           <h3>Add Numbers</h3>
@@ -139,6 +192,7 @@
           </p>
         </div>
 
+        <!-- 3 -->
         <div class="assignment-card">
           <div class="assignment-number">3</div>
           <h3>Multiply Numbers</h3>
@@ -148,204 +202,173 @@
           </p>
         </div>
 
+        <!-- 4 -->
         <div class="assignment-card">
           <div class="assignment-number">4</div>
           <h3>Check Even/Odd</h3>
           <p>
             <code>checkEven(num)</code> function ကို ရေးပြီး ဂဏန်းက Even number
-            ဖြစ်/မဖြစ် စစ်ပြီး return ပြန်ပါ။ console တွင် result ပြပါ။
+            ဖြစ်/မဖြစ် စစ်ပြီး return ပြန်ပါ။
           </p>
         </div>
 
-        <!-- <div class="assignment-card">
-          <div class="assignment-number">5</div>
-          <h3>Square Number</h3>
-          <p>
-            <code>square(num)</code> ဆိုတဲ့ function တစ်ခုရေးပြီး ပေးထားတဲ့
-            ဂဏန်းကို (square) လုပ်ပြီး return ပြန်ပေးပါ။ console မှာ result
-            ပြပါ။
-          </p>
-        </div> -->
-
+        <!-- 5 -->
         <div class="assignment-card">
           <div class="assignment-number">5</div>
           <h3>Maximum Number</h3>
           <p>
             <code>findMax(a,b)</code> function ကို ရေးပြီး ဂဏန်းနှစ်ခုထဲမှ
-            အကြီးဆုံး number return ပြန်ပါ။ console တွင် result ပြပါ။
+            အကြီးဆုံး number ကို return ပြန်ပါ။
           </p>
         </div>
 
+        <!-- 6 -->
         <div class="assignment-card">
           <div class="assignment-number">6</div>
           <h3>Minimum Number</h3>
           <p>
             <code>findMin(a,b)</code> function ကို ရေးပြီး ဂဏန်းနှစ်ခုထဲမှ
-            အငယ်ဆုံး number ကို return ပြန်ပါ။ console တွင် result ပြပါ။
+            အငယ်ဆုံး number ကို return ပြန်ပါ။
           </p>
         </div>
 
+        <!-- 7 -->
         <div class="assignment-card">
           <div class="assignment-number">7</div>
-          <h3>Area of Rectangle</h3>
+          <h3>Rectangle Area</h3>
           <p>
             <code>rectangleArea(w,h)</code> function ကို ရေးပြီး Rectangle area
-            တွက်ပြီး return ပြန်ပါ။ console တွင် result ပြပါ။
+            တွက်ပြီး return ပြန်ပါ။
           </p>
         </div>
 
+        <!-- 8 -->
         <div class="assignment-card">
           <div class="assignment-number">8</div>
           <h3>Age Checker</h3>
           <p>
-            <code>checkAge(age)</code> function ကို ရေးပြီး Requirements age <
-            13 → "Child" age >= 13 && age < 20 → "Teenager" age >= 20 && age <
-            60 → "Adult" age >= 60 → "Senior" အသက်အလိုက် category ကို return
-            ပြန်ပါ။ console တွင် result ပြပါ။
+            <code>checkAge(age)</code> function ကို ရေးပြီး အသက်အလိုက် category
+            ကို return ပြန်ပါ။
           </p>
         </div>
 
+        <!-- 9 -->
         <div class="assignment-card">
           <div class="assignment-number">9</div>
           <h3>Temperature Converter</h3>
           <p>
-            <code>toCelsius(f)</code> ဆိုတဲ့ function တစ်ခုရေးပြီး Fahrenheit
-            ကနေ Celsius ကို ပြောင်းပေးပါ။ console မှာ result ပြပါ။
+            <code>toCelsius(f)</code> function ကို ရေးပြီး Fahrenheit ကနေ
+            Celsius ကို ပြောင်းပေးပါ။
           </p>
         </div>
 
+        <!-- 10 -->
         <div class="assignment-card">
           <div class="assignment-number">10</div>
           <h3>String Length</h3>
           <p>
             <code>stringLength(text)</code> function ကို ရေးပြီး string ရဲ့
-            length ကို return ပြန်ပါ။ console တွင် result ပြပါ။
+            length ကို return ပြန်ပါ။
           </p>
         </div>
 
+        <!-- 11 -->
         <div class="assignment-card">
           <div class="assignment-number">11</div>
           <h3>Uppercase Text</h3>
           <p>
             <code>toUpper(text)</code> function ကို ရေးပြီး string ကို Uppercase
-            ပြန်ပါ။ console တွင် result ပြပါ။
+            ပြောင်းပါ။
           </p>
         </div>
 
+        <!-- 12 -->
         <div class="assignment-card">
           <div class="assignment-number">12</div>
           <h3>Lowercase Text</h3>
           <p>
             <code>toLower(text)</code> function ကို ရေးပြီး string ကို Lowercase
-            ပြန်ပါ။ console တွင် result ပြပါ။
+            ပြောင်းပါ။
           </p>
         </div>
 
+        <!-- 13 -->
         <div class="assignment-card">
           <div class="assignment-number">13</div>
           <h3>Random Number</h3>
           <p>
             <code>randomNumber()</code> function ကို ရေးပြီး Random number ကို
-            return ပြန်ပါ။ console တွင် result ပြပါ။
+            return ပြန်ပါ။
           </p>
         </div>
 
+        <!-- 14 -->
         <div class="assignment-card">
           <div class="assignment-number">14</div>
           <h3>Factorial</h3>
           <p>
-            <code>factorial(num)</code> function ကို ရေးပြီး num ရဲ့ factorial
-            ကို return ပြန်ပါ။ console တွင် result ပြပါ။
+            <code>factorial(num)</code> function ကို ရေးပြီး factorial တွက်ပါ။
           </p>
         </div>
 
+        <!-- 15 -->
         <div class="assignment-card">
           <div class="assignment-number">15</div>
           <h3>Reverse String</h3>
           <p>
             <code>reverseString(text)</code> function ကို ရေးပြီး string ကို
-            reverse ပြန်ပါ။ console တွင် result ပြပါ။
+            reverse ပြန်ပါ။
           </p>
         </div>
 
+        <!-- 16 -->
         <div class="assignment-card">
           <div class="assignment-number">16</div>
           <h3>Positive Number</h3>
           <p>
-            <code>isPositive(num)</code> function ကို ရေးပြီး num ဟာ positive
-            number ဖြစ်/မဖြစ်ကို return ပြန်ပါ။ console တွင် result ပြပါ။
+            <code>isPositive(num)</code> function ကို ရေးပြီး positive number
+            ဖြစ်/မဖြစ် စစ်ပါ။
           </p>
         </div>
 
+        <!-- 17 -->
         <div class="assignment-card">
           <div class="assignment-number">17</div>
           <h3>Circle Area</h3>
           <p>
-            <code>circleArea(r)</code> ဆိုတဲ့ function တစ်ခုရေးပြီး (circle) ရဲ့
-            ဧရိယာကို တွက်ပြီး return ပြန်ပေးပါ။ console မှာ result ပြပါ။
+            <code>circleArea(r)</code> function ကို ရေးပြီး circle area တွက်ပါ။
           </p>
         </div>
 
+        <!-- 18 -->
         <div class="assignment-card">
           <div class="assignment-number">18</div>
           <h3>Power Function</h3>
           <p>
-            <code>power(a,b)</code> ဆိုတဲ့ function တစ်ခုရေးပြီး a ကို b (power)
-            တင်ထားတဲ့ တန်ဖိုးကို return ပြန်ပေးပါ။ console မှာ result ပြပါ။
+            <code>power(a,b)</code> function ကို ရေးပြီး power တန်ဖိုးကို return
+            ပြန်ပါ။
           </p>
         </div>
 
+        <!-- 19 -->
         <div class="assignment-card">
           <div class="assignment-number">19</div>
           <h3>Discount Calculator</h3>
           <p>
-            <code>discount(price,percent)</code> discount(price, percent) ဆိုတဲ့
-            function တစ်ခုရေးပြီး ဈေးနှုန်း (price) ထဲက discount လျော့ပြီးနောက်
-            နောက်ဆုံးကျသင့်ငွေကို return ပြန်ပေးပါ။ console မှာ result ပြပါ။
+            <code>discount(price,percent)</code> function ကို ရေးပြီး discount
+            လျော့ပြီးနောက် နောက်ဆုံးကျသင့်ငွေကို return ပြန်ပါ။
           </p>
         </div>
 
+        <!-- 20 -->
         <div class="assignment-card">
           <div class="assignment-number">20</div>
           <h3>Grade Checker</h3>
           <p>
-            <code>checkGrade(mark)</code> ဆိုတဲ့ function တစ်ခုရေးပါ။ ပေးထားတဲ့
-            mark (0 မှ 100 အတွင်း score) အပေါ်မူတည်ပြီး အောက်ပါအတိုင်း Grade ကို
-            သတ်မှတ်ပြီး return ပြန်ပေးရမည်။ Grade သတ်မှတ်ချက်များ 80 မှ 100
-            အတွင်း → "A" 70 မှ 79 အတွင်း → "B" 60 မှ 69 အတွင်း → "C" 50 မှ 59
-            အတွင်း → "D" 0 မှ 49 အတွင်း → "F"
+            <code>checkGrade(mark)</code> function ကို ရေးပြီး mark အပေါ်မူတည်၍
+            Grade သတ်မှတ်ပါ။
           </p>
         </div>
-
-        <!-- <div class="assignment-card">
-          <div class="assignment-number">26</div>
-          <h3>Count Vowels</h3>
-          <p>Create <code>countVowels(text)</code> function.</p>
-        </div>
-
-        <div class="assignment-card">
-          <div class="assignment-number">27</div>
-          <h3>Login Checker</h3>
-          <p>Create <code>login(user,pass)</code> function.</p>
-        </div>
-
-        <div class="assignment-card">
-          <div class="assignment-number">28</div>
-          <h3>Array Max</h3>
-          <p>Create <code>arrayMax(arr)</code> function.</p>
-        </div>
-
-        <div class="assignment-card">
-          <div class="assignment-number">29</div>
-          <h3>Array Min</h3>
-          <p>Create <code>arrayMin(arr)</code> function.</p>
-        </div>
-
-        <div class="assignment-card">
-          <div class="assignment-number">30</div>
-          <h3>BMI Calculator</h3>
-          <p>Create <code>bmi(weight,height)</code> function.</p>
-        </div> -->
       </div>
 
       <!-- Footer -->
