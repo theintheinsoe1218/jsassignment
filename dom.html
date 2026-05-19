@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array & Object Assignments</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ff7a18, #ffb347);
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 14px;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.navbar a.active {
+  background: #ff7a18;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 110px 20px 40px;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  color: white;
+  margin-bottom: 35px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+}
+
+.header p {
+  opacity: 0.9;
+}
+
+/* GRID */
+.assignment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.assignment-card {
+  background: rgba(255,255,255,0.9);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: 0.3s;
+  border-left: 6px solid #ff7a18;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.assignment-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* NUMBER */
+.assignment-number {
+  width: 42px;
+  height: 42px;
+  background: #ff7a18;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+/* TITLE */
+.assignment-card h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.assignment-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* CODE STYLE */
+code {
+  background: #2d3436;
+  color: #ffeaa7;
+  padding: 3px 6px;
+  border-radius: 5px;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  color: white;
+}
+
+.footer span {
+  background: rgba(255,255,255,0.2);
+  padding: 10px 18px;
+  border-radius: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+}
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a href="index.html">Function Assignment</a>
+      <a href="array-object.html" >Array & Object</a>
+      <a href="dom.html" class="active">DOM</a>
+
+    </div>
+
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1>JavaScript DOM Assignments</h1>
+        <p>Practice DOM Step by Step 🚀</p>
+      </div>
+
+      <!-- Assignments -->
+      <div class="assignment-grid">
+        <!-- 1 -->
+        <a href="bmicalculator.html" target="_blank" style="text-decoration:none;">
+  <div class="assignment-card">
+
+    <div class="assignment-number">1</div>
+
+    <h3>BMI Calculator</h3>
+
+    <p>
+      
+      BMI = (weight(lb) × 703) / height²(in)
+    <br>
+      BMI Range <br>
+Below 18.5 → Underweight <br>
+18.5 - 24.9 → Normal <br>
+25 - 29.9 → Overweight <br>
+30+ → Obese <br>
+    </p>
+
+  </div>
+</a>
+
+<a href="tip.html" target="_blank" style="text-decoration:none;">
+  <div class="assignment-card">
+
+    <div class="assignment-number">2</div>
+
+    <h3>Tip Calculator</h3>
+
+    <p>
+      
+      Tip Amount = (Bill Amount × Tip %) ÷ 100
+    
+    </p>
+
+  </div>
+</a>
+
+
+
+
+        
+         
+
+      
+      
+        </div>
+    
+
+    <script src="arr.js"></script>
+  </body>
+</html>
